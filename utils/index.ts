@@ -13,6 +13,7 @@ import {
     NostrIcon,
     XIcon
 } from "@bitcoin-dev-project/bdp-ui/icons"
+import { title } from "process"
 
 export const SORTOPTIONS = ["sort", "random", "newest first", "oldest first"]
 
@@ -191,6 +192,30 @@ export const NAVLINKS = [
     {
         name: "Explore",
         link: "/explore"
+    }
+]
+
+export const BITCOINPATHS = [
+    {
+        image: "/images/explore/backpack-illustration.png",
+        title: "Learn",
+        description: "Discover how bitcoin really works, from first steps to deep dives.",
+        link: "/learn",
+        cta: "View Resources",
+    },
+    {
+        image: "/images/explore/contribute-illustration.png",
+        title: "Contribute",
+        description: "These resources help you go from curious observer to confident contributor.",
+        link: "contribute",
+        cta: "View Resources",
+    },
+    {
+        image: "/images/explore/funded-illustration.png",
+        title: "Get Funded",
+        description: "Secure a grant to launch your full-time career in bitcoin open-source development.",
+        link: "/get-funded",
+        cta: "View Resources",
     }
 ]
 
@@ -551,10 +576,10 @@ export function shuffle(data: IssueCardElement[]) {
     while (currIndex !== 0) {
         let randomIndex = Math.floor(Math.random() * currIndex)
         currIndex--
-        ;[data[currIndex], data[randomIndex]] = [
-            data[randomIndex],
-            data[currIndex]
-        ]
+            ;[data[currIndex], data[randomIndex]] = [
+                data[randomIndex],
+                data[currIndex]
+            ]
     }
 
     return data
